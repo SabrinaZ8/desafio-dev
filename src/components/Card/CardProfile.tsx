@@ -1,4 +1,5 @@
 import imageBg from '../../assets/images/img-bg.png';
+import userImgDeafult from '../../assets/images/user-img-default.png';
 import { SkillTag } from './SkillTag';
 
 type CardProfileProps = {
@@ -13,7 +14,7 @@ export const CardProfile = ({nome, sobrenome, imagemPerfil}:CardProfileProps) =>
         <img src={imageBg} alt="" className="w-full h-full object-cover rounded-t-2xl" />
         <div className="absolute left-1/2 -translate-x-1/2 bottom-[-48px]">
           <img
-            src={imagemPerfil}
+            src={imagemPerfil || userImgDeafult}
             alt=""
             className="w-24 h-24 box-content object-cover rounded-full border-6 border-[#101828]"
           />
