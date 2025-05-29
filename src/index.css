@@ -3,6 +3,13 @@
     --font-inter: 'inter', sans-serif;
     --font-onest: 'onest', sans-serif;
 }
+.section-card {
+    @apply w-full sm:w-[368px] min-h-[427px] bg-[radial-gradient(at_right_bottom,_#80A9F9,_#101828_32%)] rounded-2xl font-onest
+    shadow-lg/70
+}
+.flex-custom {
+    @apply flex-col justify-center items-center
+}
 .tags {
     @apply flex text-[#101828] text-sm font-bold
 }
