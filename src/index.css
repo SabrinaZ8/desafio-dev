@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.tags {
+    @apply flex text-[#101828] text-sm font-bold
+}
+.tags div {
+    @apply flex items-center mx-1 bg-[#80F9BC] rounded-2xl h-[28px] px-5 
+}
