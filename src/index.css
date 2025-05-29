@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+@theme {
+    --font-inter: 'inter', sans-serif;
+    --font-onest: 'onest', sans-serif;
+}
 .tags {
     @apply flex text-[#101828] text-sm font-bold
 }
