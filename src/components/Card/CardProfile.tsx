@@ -20,7 +20,7 @@ export const CardProfile = ({nome, sobrenome, profissao, descricao, imagemPerfil
         <div className="text-white/70 mt-16 flex flex-custom">
           <h1 className="text-white font-bold text-2xl/tight">{`${nome} ${sobrenome}`}</h1>
           <h2 className="font-bold">{profissao}</h2>
-          <p className="italic font-inter my-6 font-light">
+          <p className="italic font-inter my-6 font-light w-3/4 mx-1.5">
             {descricao}
           </p>
         </div>
