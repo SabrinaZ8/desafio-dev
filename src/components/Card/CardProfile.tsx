@@ -5,9 +5,12 @@ import { SkillTag } from './SkillTag';
 type CardProfileProps = {
     nome: string;
     sobrenome: string;
+    profissao: string;
+    descricao?: string;
     imagemPerfil?: string;
+    skills?: string[];
 }
-export const CardProfile = ({nome, sobrenome, imagemPerfil}:CardProfileProps) => {
+export const CardProfile = ({nome, sobrenome, profissao, descricao, imagemPerfil, skills}:CardProfileProps) => {
   return (
     <section className="section-card">
       <div className="h-[147px] relative">
@@ -23,12 +26,12 @@ export const CardProfile = ({nome, sobrenome, imagemPerfil}:CardProfileProps) =>
       <div className="flex flex-custom text-center text-lg/tight">
         <div className="text-white/70 mt-16 flex flex-custom">
           <h1 className="text-white font-bold text-2xl/tight">{`${nome} ${sobrenome}`}</h1>
-          <h2 className="font-bold">Desenvolvedora Front-End</h2>
+          <h2 className="font-bold">{profissao}</h2>
           <p className="italic font-inter my-6 font-light">
-            Cria Interfaces Bonitas, <br />Rápidas e Intuitivas.
+            {descricao}
           </p>
         </div>
-        <SkillTag />
+        <SkillTag skills={skills}/>
       </div>
     </section>
   );
