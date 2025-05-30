@@ -1,15 +1,8 @@
 import imageBg from '../../assets/images/img-bg.png';
 import userImgDeafult from '../../assets/images/user-img-default.png';
 import { SkillTag } from './SkillTag';
+import type { CardProfileProps } from './types/index';
 
-type CardProfileProps = {
-    nome: string;
-    sobrenome: string;
-    profissao: string;
-    descricao?: string;
-    imagemPerfil?: string;
-    skills?: string[];
-}
 export const CardProfile = ({nome, sobrenome, profissao, descricao, imagemPerfil, skills}:CardProfileProps) => {
   return (
     <section className="section-card">
@@ -18,7 +11,7 @@ export const CardProfile = ({nome, sobrenome, profissao, descricao, imagemPerfil
         <div className="absolute left-1/2 -translate-x-1/2 bottom-[-48px]">
           <img
             src={imagemPerfil || userImgDeafult}
-            alt=""
+            alt={`Foto de perfil de ${nome} ${sobrenome}`}
             className="w-24 h-24 box-content object-cover rounded-full border-6 border-[#101828]"
           />
         </div>

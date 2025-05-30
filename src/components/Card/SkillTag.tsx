@@ -1,6 +1,4 @@
-type SkillTagProp = {
-  skills?: string[];
-};
+import type { SkillTagProp } from "./types/index";
 
 export const SkillTag = ({ skills }: SkillTagProp) => {
   return (
